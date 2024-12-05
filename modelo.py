@@ -3,7 +3,7 @@ class Modelo:
         self.conn = conn
 
     def obtener_usuarios(self):
-        return self.conn.query("SELECT id, name, age FROM users").to_dict()
+        return self.conn.query("SELECT id, name, age FROM users")
 
     def insertar_usuario(self, name, age):
         with self.conn.session as s:
