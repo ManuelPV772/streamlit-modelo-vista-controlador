@@ -18,9 +18,4 @@ class Vista:
 
     def mostrar_usuarios(self, usuarios, controlador):
         st.subheader("Usuarios Registrados")
-        if usuarios:
-            for user in usuarios:
-                st.write(f"ID: {user[0]}, Nombre: {user[1]}, Edad: {user[2]}")
-
-        else:
-            st.info("No hay usuarios registrados aún.")
+        st.dataframe(usuarios)
